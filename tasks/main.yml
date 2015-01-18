@@ -1,0 +1,7 @@
+---
+- name: put hdfs-datanode.rb eye config file
+  template: src=hdfs/datanode.rb dest=/etc/eye/hdfs-datanode.rb owner=root group=root mode=0644
+
+- name: load config in eye
+  command: bash -c "source /usr/local/rvm/scripts/rvm && eye l /etc/eye/apps.eye"
+  sudo: yes
