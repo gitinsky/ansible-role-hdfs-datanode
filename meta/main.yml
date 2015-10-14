@@ -1,3 +1,4 @@
 ---
 dependencies:
+  - { role: eye }
   - { role: hadoop }
