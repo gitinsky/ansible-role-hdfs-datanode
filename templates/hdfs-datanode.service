@@ -3,6 +3,9 @@ Description=HDFS Datanode Service
 Documentation=https://github.com/gitinsky/ansible-role-hdfs-datanode
 
 [Service]
+LimitNOFILE=65535
+Environment=LC_ALL=en_US.UTF-8
+Environment=LANG=en_US.UTF-8
 Type=simple
 User={{ hadoop_user }}
 Group={{ hadoop_user }}
