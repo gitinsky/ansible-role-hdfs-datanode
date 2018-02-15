@@ -9,7 +9,7 @@ Environment=LANG=en_US.UTF-8
 Type=simple
 User={{ hadoop_user }}
 Group={{ hadoop_user }}
-ExecStart={{ hadoop_distr_prefix }}/bin/hdfs datanode
+ExecStart={{ hadoop_distr_prefix }}-{{ env_name }}-{{ hadoop_version }}/bin/hdfs datanode
 StandardOutput=journal
 StandardError=journal
 Restart=always
